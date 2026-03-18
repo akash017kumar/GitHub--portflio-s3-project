@@ -1,198 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donna | Safe Space</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Donna | You’re Not Alone</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f5f7fa;
-            color: #333;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-        /* NAVBAR */
-        nav {
-            background: white;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
 
-        nav h2 {
-            margin: 0;
-            color: #6c9bcf;
-        }
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
 
-        /* HERO */
-        .hero {
-            background: linear-gradient(135deg, #6c9bcf, #a3c4f3);
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
+nav h2 {
+    color: #6366f1;
+}
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(135deg,#6366f1,#a5b4fc);
+    color: white;
+}
 
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
 
-        /* SECTION */
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-        }
+.hero p {
+    font-size: 1.2rem;
+}
 
-        .section h2 {
-            color: #6c9bcf;
-            margin-bottom: 20px;
-        }
+/* SECTIONS */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
 
-        /* CARDS */
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+.section h2 {
+    color: #6366f1;
+    margin-bottom: 40px;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            width: 250px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-        /* ABOUT */
-        .about {
-            max-width: 600px;
-            margin: auto;
-            line-height: 1.6;
-        }
+.card {
+    background: white;
+    padding: 30px;
+    width: 260px;
+    border-radius: 16px;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
-        /* FORM */
-        form {
-            max-width: 500px;
-            margin: auto;
-        }
+.card:hover {
+    transform: translateY(-10px);
+}
 
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
+/* ABOUT */
+.about {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
 
-        button {
-            background: #6c9bcf;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+/* FORM */
+form {
+    max-width: 500px;
+    margin: auto;
+}
 
-        button:hover {
-            background: #5a86b5;
-        }
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
 
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #6c9bcf;
-            color: white;
-        }
+button {
+    background: #6366f1;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
 
-        .small {
-            font-size: 13px;
-            opacity: 0.8;
-        }
+button:hover {
+    background: #4f46e5;
+}
 
-    </style>
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CHAT BOX */
+.chatbox {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+}
+
+.chatbox-header {
+    background: #6366f1;
+    color: white;
+    padding: 10px;
+}
+
+.chatbox-messages {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chatbox-input {
+    display: flex;
+}
+
+.chatbox-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+}
+
+.chatbox-input button {
+    width: auto;
+}
+
+footer {
+    background: #6366f1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <h2>Donna</h2>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-    <h1>Your feelings matter. Share them.</h1>
+    <h1>You don’t have to go through this alone.</h1>
     <p>Well wisher • Friend • Listener</p>
 </section>
 
-<!-- HOW I CAN HELP -->
 <section class="section">
     <h2>How I Can Help</h2>
     <div class="cards">
-        <div class="card">
-            <h3>💬 Talk Freely</h3>
-            <p>Say anything without fear or judgment.</p>
-        </div>
-        <div class="card">
-            <h3>🧠 Emotional Support</h3>
-            <p>You're not alone. Someone is here for you.</p>
-        </div>
-        <div class="card">
-            <h3>🌱 Guidance</h3>
-            <p>Small steps to help you feel better.</p>
-        </div>
+        <div class="card">💬 Talk Freely</div>
+        <div class="card">🧠 Emotional Support</div>
+        <div class="card">🌱 Guidance</div>
     </div>
 </section>
 
-<!-- ABOUT -->
 <section class="section">
     <h2>About</h2>
     <div class="about">
-        <p>
-            Hi, I’m Donna.
-        </p>
-        <p>
-            This is a safe space for anyone who feels overwhelmed, stressed, or just needs someone to listen.
-        </p>
-        <p>
-            You don’t need to have everything figured out.  
-            Sometimes, just sharing what’s on your mind can make things a little lighter.
-        </p>
+        Hi, I’m Donna.  
+        This is a safe space where you can share anything without fear.  
+        You are heard. You matter.
     </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section">
-    <h2>Reach Out Anytime</h2>
-    <p>You can share anything here. You are safe.</p>
-
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" rows="5" placeholder="Write what you feel..." required></textarea>
-        <button type="submit">Send Message</button>
+    <h2>Send a Message</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your name" required>
+        <input type="email" id="email" placeholder="Your email" required>
+        <textarea id="message" placeholder="Write your thoughts..." required></textarea>
+        <button type="submit">Send</button>
     </form>
-
-    <p class="small">Your privacy matters. What you share stays confidential.</p>
 </section>
 
-<!-- FOOTER -->
+<!-- CHAT -->
+<div class="chatbox" id="chatbox">
+    <div class="chatbox-header">Chat</div>
+    <div class="chatbox-messages" id="messages"></div>
+    <div class="chatbox-input">
+        <input id="chatInput" placeholder="Type...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+    Chat on WhatsApp
+</a>
+
 <footer>
-    <p>Donna © 2026</p>
+    Donna © 2026
 </footer>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+<script>
+const firebaseConfig = {
+    apiKey: "YOUR_KEY",
+    authDomain: "YOUR_DOMAIN",
+    projectId: "YOUR_ID"
+};
+
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// CONTACT FORM
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    await db.collection("messages").add({
+        name: name.value,
+        email: email.value,
+        message: message.value,
+        time: new Date()
+    });
+
+    alert("Message sent ❤️");
+});
+
+// CHAT
+function sendMessage() {
+    const input = document.getElementById("chatInput");
+
+    db.collection("chat").add({
+        text: input.value,
+        time: new Date()
+    });
+
+    input.value = "";
+}
+
+db.collection("chat").orderBy("time").onSnapshot(snapshot => {
+    const messages = document.getElementById("messages");
+    messages.innerHTML = "";
+
+    snapshot.forEach(doc => {
+        const msg = document.createElement("div");
+        msg.textContent = doc.data().text;
+        messages.appendChild(msg);
+    });
+});
+</script>
 
 </body>
 </html>
